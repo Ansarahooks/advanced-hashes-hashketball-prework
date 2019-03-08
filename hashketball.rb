@@ -187,10 +187,15 @@ def player_numbers(team_name)
   return array
 end
 
-def player_stats(name)
-  game_hash.keys.each do |team|
-    if game_hash[team][:players].keys.include?(name)
-      return game_hash[team][:players][:name]
-    end
-  end
+def player_stats name
+  player_hash = {}
+  game_hash.each do |team_position, team_data|
+   return team_data[:players].each do |player_name, player_data|
+     if player_name == name
+       return player_data
+       elsif player_name =! name
+       return nil
+     end
+ end
+end
 end
