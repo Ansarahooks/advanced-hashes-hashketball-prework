@@ -175,10 +175,10 @@ def team_names
   array
 end
 
-def player_numbers(team)
+def player_numbers(team_name)
   array = []
   game_hash.each do |location, data|
-    if data[:team_name] == team
+    if data[:team_name] == team_name
       data[:players].each do |name, scores|
         array << scores[:points]
       end
