@@ -179,12 +179,12 @@ def player_numbers(team)
   array = []
   game_hash.each do |location, data|
     if data[:team_name] == team
-        data[:players].each do |name, scores|
-          array << scores[:points]
+      data[:players].each do |name, scores|
+        array << scores[:points]
       end
     end
   end
-  array
+  return array
 end
 
 def player_stats(name)
