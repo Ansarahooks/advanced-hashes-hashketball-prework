@@ -175,5 +175,10 @@ def team_names
   array
 end
 
-def player_numbers(player_name)
+def player_numbers(team_name)
+  game.hash[:home][:team_name].each do |players_stats|
+    if team_name == :team_name
+      return player_stats
+    end
+  end
 end
