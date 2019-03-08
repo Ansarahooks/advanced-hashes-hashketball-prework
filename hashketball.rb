@@ -175,6 +175,18 @@ def team_names
   array
 end
 
+def player_numbers(team)
+  array = []
+  game_hash.each do |location, data|
+    if data[:team_name] == team 
+        data[:players].each do |name, scores|
+          array << scores[:points]
+      end
+    end
+  end
+  array
+end
+
 def player_stats(name)
   game_hash.keys.each do |team|
     if game_hash[team][:players].keys.include?(name)
