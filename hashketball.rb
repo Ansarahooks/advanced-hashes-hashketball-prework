@@ -178,7 +178,7 @@ end
 def player_numbers team
   number_array = []
   game_hash.each do |team_position, team_data|
-    if team_data[:team_name] == team 
+    if team_data[:team_name] == team
         team_data[:players].each do |player_name, player_scores|
      number_array << player_scores[:points]
 
