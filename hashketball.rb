@@ -174,27 +174,3 @@ def team_names
   end
   array
 end
-
-def player_numbers(team_name)
-  array = []
-  game_hash.each do |location, data|
-    if data[:team_name] == team_name
-      data[:players].each do |name, scores|
-        array << scores[:points]
-      end
-    end
-  end
-  return array
-end
-
-def player_stats name
-  game_hash.each do |team_position, team_data|
-    team_data[:players].each do |player_name, player_data|
-     if player_name == name
-       return player_data
-       elsif player_name =! name
-       return nil
-     end
- end
-end
-end
