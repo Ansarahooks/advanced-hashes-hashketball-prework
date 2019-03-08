@@ -178,7 +178,7 @@ end
 def player_numbers(team_name)
   game_hash[:home].each do |players_stats|
     if team_name == :team_name
-      return player_stats
+      return player_stats[:number]
     end
   end
 end
